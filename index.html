@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Shoe Store Page </title>
+    
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Runway</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope:wght@400;500;700;800&amp;family=Playfair+Display:wght@400;500;700;900" rel="stylesheet" />
+    <style type="text/tailwindcss">
+        :root {
+            --charcoal: #1a1a1a;
+            --burgundy: #800020;
+            --gold: #ffd700;
+        }
+        body { font-family: 'Manrope', sans-serif; background-color: var(--charcoal); color: white; }
+        h1, h2, h3, h4, h5, h6, .logo { font-family: 'Playfair Display', serif; }
+        .runwa-y .y-char { position: relative; }
+        .runwa-y .y-char::after {
+            content: ''; position: absolute; bottom: -2px; left: 20%; width: 60%; height: 10px;
+            background-image: url('data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 20C5 17.7909 6.79086 16 9 16H15C17.2091 16 19 17.7909 19 20" stroke="%23FFD700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+            background-size: 100% 100%; transform: translateY(2px);
+        }
+    </style>
+</head>
+<body class="bg-[var(--charcoal)] text-white">
+    <div class="relative flex size-full min-h-screen flex-col overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-gray-800 px-10 py-5">
+                <div class="flex items-center gap-4">
+                    <a class="text-white text-3xl font-bold tracking-tighter logo runwa-y" href="index.html">Runwa<span class="y-char">y</span></a>
+                </div>
+                <nav class="hidden md:flex flex-1 justify-center gap-8">
+                    <a class="text-gray-300 hover:text-white transition-colors text-sm font-medium" href="#">Men's</a>
+                    <a class="text-gray-300 hover:text-white transition-colors text-sm font-medium" href="products.html">Women's</a>
+                    <a class="text-gray-300 hover:text-white transition-colors text-sm font-medium" href="#">New Arrivals</a>
+                    <a class="text-gray-300 hover:text-white transition-colors text-sm font-medium" href="#">Sale</a>
+                    <a class="text-gray-300 hover:text-white transition-colors text-sm font-medium" href="#">About Us</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <button class="text-gray-300 hover:text-white transition-colors"><svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path></svg></button>
+                    <button class="text-gray-300 hover:text-white transition-colors"><svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"></path></svg></button>
+                     <a href="cart.html" class="text-white relative">
+                        <svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,160H40V56H216V200ZM176,88a48,48,0,0,1-96,0,8,8,0,0,1,16,0,32,32,0,0,0,64,0,8,8,0,0,1,16,0Z"></path></svg>
+                        <span id="cart-count" class="absolute -top-2 -right-2 bg-[var(--gold)] text-[var(--charcoal)] text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center hidden">0</span>
+                    </a>
+                </div>
+            </header>
+            <main class="flex-1">
+                <section class="relative h-[80vh] flex items-center justify-center text-center">
+                    <div class="absolute inset-0 bg-black opacity-40 z-10"></div>
+                    <img alt="Stylish shoes on a dark background" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdfwAwkXruYYVzgZZE2PPrlgwOS7ROt0UBpkaAUFSehXMCuOAhb-_IaJ3uQeW1zMagc_6J8jKj2VmyXySU_x5WH43v6fwo589roSoDjPgr2QfIXXvPYsmA4xdYZltyXtamAO4tPnRCnPnQeNkxmz_4yQXia3HIqQRsX5Y67O77Es6j1AycSmqbSx1jyEj6e8u2I4wLgVgQyWKpwT_mYr2_6Hqi__xCJE5EgkksagfdNQkFDICW5egfafALdMjQEtIAKtNk0yVrT0iA" />
+                    <div class="relative z-20 flex flex-col items-center gap-6 px-4">
+                        <h1 class="text-white text-5xl md:text-6xl font-black tracking-tight">Step into Elegance</h1>
+                        <h2 class="text-gray-200 text-lg font-light max-w-2xl">Discover the latest collection from Runway, where timeless design meets modern craftsmanship. Unparalleled comfort and style for the discerning individual.</h2>
+                        <a href="products.html" class="mt-4 inline-block bg-[var(--burgundy)] hover:bg-opacity-80 text-white text-base font-semibold py-3 px-8 rounded-full transition-colors duration-300">Shop New Arrivals</a>
+                    </div>
+                </section>
+                <section class="py-20 px-10">
+                    <h2 class="text-4xl font-bold text-center mb-12">Featured Styles</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="group"><div class="overflow-hidden rounded-lg"><img alt="The Classic shoe" class="w-full h-auto object-cover aspect-[3/4] group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnaXSKpg90prZNqcNfoBOsvwRMvGwzRcet0M6374lLEaz4Uk517wUOBFqSx6LzEIcDKzG8sx6RWKtcsIPK6ayeElfT_em8026PyhM0XJV0tkn1cATn0r1gq4zmmG0w8K8RMrWRmBGaTHFb6Vj7o9JBAjnV2N-2aip7Vql0sKJwBOf2CT9yOt0TE01uvvD4JX8DhhXpWV-fdYLVVs0GDfvLO9e6JxMln2oXRraionyR-oXHKf5t0kxQ-RX4cUlkW6182fAx1YL20tCX" /></div><div class="mt-4 text-center"><h3 class="text-xl font-semibold">The Classic</h3><p class="text-gray-400 text-sm">Timeless elegance for every occasion.</p></div></div>
+                        <div class="group"><div class="overflow-hidden rounded-lg"><img alt="The Modernist shoe" class="w-full h-auto object-cover aspect-[3/4] group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9pI_SkTrYB0xlMH6ofv3tnKOLtsugcfkDjDgR7sicmQ9JB6OOzubCftXSrm7_RCAc896LK4TT0mXa3CM62NaT3RCqaYCJGqrF8Jttyf-pmjovuyuUbl9wY4T2dYK-XM9DjMFlyuurb_QoEfFPJ-uJWW1aRnoyCx_QaqlIzuFzAg1bMtxju1z1cq31Bt95ZX8KTHQ2e1Pv0GwU_s5qi8tij-BY-RLbR9taqTkJuYQMYlQr-0Bt3wHfxTLhCZ41seH73cbfxKD4NeiV" /></div><div class="mt-4 text-center"><h3 class="text-xl font-semibold">The Modernist</h3><p class="text-gray-400 text-sm">Sleek designs for the contemporary individual.</p></div></div>
+                        <div class="group"><div class="overflow-hidden rounded-lg"><img alt="The Avant-Garde shoe" class="w-full h-auto object-cover aspect-[3/4] group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxAUia__Qj5_SoQSQghYggsRtIoJZPl57h3nxckCbNSZbhGdzCDo8oURq1t7BuFB7nOsFJQoZkYGA7ILCUwsmPfL8wxjWebNPwHwQcT-wAXkdvZZpRABL_AG-D_rZwDchU0h1p1zZ82GbbwAkI1qty6Ts8r_mqrQ4S0hrcZk9HJn1H7_0Rcn9NI4VP-66WnvVAaTsV54hIRYOXEpeBZfCfy1p0dBLIHdc8cwoMjkrQKU720C0OZz2sBtMei42rwIsT88smJCdS6y4J" /></div><div class="mt-4 text-center"><h3 class="text-xl font-semibold">The Avant-Garde</h3><p class="text-gray-400 text-sm">Bold statements for the fashion-forward.</p></div></div>
+                    </div>
+                </section>
+                <section class="bg-black py-20 px-10">
+                    <h2 class="text-4xl font-bold text-center mb-12">Shop by Category</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="relative group overflow-hidden rounded-lg"><img alt="Men's shoes" class="w-full h-full object-cover aspect-square group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhQ1yGdn460riKHAlL3VHrQm-L8MHH_BtT7NZDcilkCFGXy6Iqib6K3lpHDEaOoKkudKpBkUFdsy7Rpx9UkMRU73XD80tpMFUZABga-gRY9HofhlK028iEkoCXElcDl82NOeNkRSo_v1CedpwTWG6RlCGJire8EmTgmRp3CvjOQVSHU7-GJyiZrNiZDGGj2SCFmayCsOhDH9g-IYkfZtQlqA2t9jr0pB7oTyGRy4rmTF2Wug15Zu3DXJBdftc_oyurYq_RxAEOV0xb" /><div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center"><h3 class="text-white text-2xl font-bold">Men's</h3></div></div>
+                        <div class="relative group overflow-hidden rounded-lg"><a href="products.html" class="absolute inset-0 w-full h-full"></a><img alt="Women's shoes" class="w-full h-full object-cover aspect-square group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTokCfblJs2UKSPWKJncHTdV-8EIdLC3oITpyWFhE_IauGYE5kdyeQf3goYTEK7QSenJ2i8BsJUufB0Lq0597xWxlP5UwyGyOmRIp8mX6UPJSA9UfT1U6xxliaONmGL8dBWMXWX-WYOMGtPBAmJdxqXzgLsJd-1CMH3i3oi-Za2ufGHutI50SEXXydGUqfvHRycjAV6HqRxm3IgxGKHtS9SkP_ARzpE4x7gDqC4PbghalQiaRUte2HOFW9ScnwjNxW4e0YlLRYmECc" /><div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center"><h3 class="text-white text-2xl font-bold">Women's</h3></div></div>
+                        <div class="relative group overflow-hidden rounded-lg"><img alt="Accessories" class="w-full h-full object-cover aspect-square group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnY8UNISC6AtzKjam1_mogciGD3gWnKQTwtMA2LGnOFJMcmmhbKwD11H-_FGiZwWbmCNkGPYdb4imzS-ddkF9UmhULaFJRqgYpbXhbtsMGgXcl-Wnc7R9vD8pL5FR42pbnZW56O_htV-faxHaKqH4gPnEXZBGeJYQtTZZGi0r9s8raAzi3tuRUVXaqV3n0LCl6NMyurbosIm9gvTqTRZPgdIy0Pq51Vl2L5zahB4Kvt0t661id4XLhBFpGDfWP6RnfGB2e4xmGgQci" /><div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center"><h3 class="text-white text-2xl font-bold">Accessories</h3></div></div>
+                    </div>
+                </section>
+            </main>
+            <footer class="bg-black text-gray-400 py-12 px-10">
+                <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div><h4 class="text-white text-lg font-semibold mb-4">Runway</h4><p class="text-sm">Crafting footwear for the modern world.</p></div>
+                    <div><h4 class="text-white text-lg font-semibold mb-4">Shop</h4><ul class="space-y-2 text-sm"><li><a class="hover:text-white transition-colors" href="#">Men's</a></li><li><a class="hover:text-white transition-colors" href="products.html">Women's</a></li><li><a class="hover:text-white transition-colors" href="#">New Arrivals</a></li><li><a class="hover:text-white transition-colors" href="#">Sale</a></li></ul></div>
+                    <div><h4 class="text-white text-lg font-semibold mb-4">About</h4><ul class="space-y-2 text-sm"><li><a class="hover:text-white transition-colors" href="#">Our Story</a></li><li><a class="hover:text-white transition-colors" href="#">Careers</a></li><li><a class="hover:text-white transition-colors" href="#">Press</a></li></ul></div>
+                    <div><h4 class="text-white text-lg font-semibold mb-4">Follow Us</h4><div class="flex space-x-4"><a class="hover:text-white transition-colors" href="#">Fb</a><a class="hover:text-white transition-colors" href="#">In</a><a class="hover:text-white transition-colors" href="#">Tw</a></div></div>
+                </div>
+                <div class="mt-8 border-t border-gray-800 pt-8 text-center text-sm"><p>© 2024 Runway. All Rights Reserved.</p></div>
+            </footer>
+        </div>
+    </div>
+    
+
+
+    <script src="page.js"></script>
+</body>
+</html>
